@@ -13,13 +13,13 @@ To install this in local server after downloading and extracting the respo.
 3. Create mysql database and configure in setings.py
     ```json
     DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'actions_db',
-        'HOST':'127.0.0.1',
-        'USER':'root',
-        'PASSWORD':''
-       }
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'actions_db',
+            'HOST':'localhost',
+            'USER':'root',
+            'PASSWORD':''
+        }
     }
     ```
 4. Make migrations and migrate
@@ -31,8 +31,8 @@ To install this in local server after downloading and extracting the respo.
     ```commandline
    python manage.py runscripts script
     ```
-   dummy data is stores in `test.json` file which is store inside the diresctory `scripts`.
-   When this command runs the file `scripts/script.py` executes and dummy data will be stored.
+   Dummy data is stores in `test.json` file which is store inside the diresctory `scripts`.
+   When this command runs the file `scripts/script.py` executed and dummy data will be stored in db.
    
 6. Running the local server
     ```commandline
