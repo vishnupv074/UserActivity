@@ -39,9 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
 
-    'django_extensions',
+    'django_extensions',  # Installed for using the runscripts command
 
-
+    # Apps created
     'api',
 ]
 
@@ -73,7 +73,7 @@ TEMPLATES = [
     },
 ]
 
-AUTH_USER_MODEL = 'api.Users'
+AUTH_USER_MODEL = 'api.Users'  # Registering custom user model
 
 WSGI_APPLICATION = 'Activity.wsgi.application'
 
@@ -83,11 +83,11 @@ WSGI_APPLICATION = 'Activity.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.mysql',  # Setting up mysql database
         'NAME': 'actions_db',
-        'HOST':'127.0.0.1',
-        'USER':'root',
-        'PASSWORD':''
+        'HOST': '127.0.0.1',
+        'USER': 'root',
+        'PASSWORD': ''
     }
 }
 

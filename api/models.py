@@ -33,7 +33,7 @@ class UsersManager(BaseUserManager):
 
 # Custom user model included real name and timezone fields
 class Users(AbstractBaseUser):
-    id = models.CharField(max_length=255, primary_key=True)
+    id = models.CharField(max_length=255, primary_key=True)  # Primary key data type changes for varchar data
     email = models.EmailField(unique=True, verbose_name='email', max_length=60)
     real_name = models.CharField(max_length=60)
     tz = models.CharField(max_length=100)
@@ -59,8 +59,9 @@ class Users(AbstractBaseUser):
     objects = UsersManager()
 
 
+# Models for storing Activity periods
 class Activities(models.Model):
     start_time = models.DateTimeField()
     end_time = models.DateTimeField()
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)  # Stores the corresponding user
     date_created = models.DateTimeField(auto_now_add=True)
