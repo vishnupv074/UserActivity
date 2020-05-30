@@ -41,7 +41,7 @@ To install this in local server after downloading and extracting the respo.
    
 7. Calling the API
 
-    Calling the api will return the Users and their corresponding activity periods.
+    Calling the api will return all the Users and their corresponding activity periods.
     ```html
    http://127.0.0.1:8000/api/
     ```
@@ -72,3 +72,10 @@ To install this in local server after downloading and extracting the respo.
         ]
     }
     ```
+   
+   Call the api followed by object id will return specific object
+   
+   ```html
+   http://127.0.0.1:8000/api/W012A3CDE
+    ```
+   Returns NotFound error when the object with given id is not in db.
