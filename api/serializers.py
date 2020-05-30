@@ -11,7 +11,7 @@ class ActivitySerializer(serializers.ModelSerializer):
 
 # Serializer for user objects
 class UserSerializer(serializers.ModelSerializer):
-    activities =serializers.SerializerMethodField('get_activity')
+    activity_periods =serializers.SerializerMethodField('get_activity')
 
     # Function for returning the corresponding activity of a user with this serializer
     def get_activity(self, dat):
@@ -21,4 +21,4 @@ class UserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Users
-        fields = ['id', 'real_name', 'tz', 'activities']
+        fields = ['id', 'real_name', 'tz', 'activity_periods']
