@@ -29,7 +29,7 @@ To install this in local server after downloading and extracting the respo.
     ```
 5. Insert dummy data.
     ```commandline
-   python manage.py runscripts script
+   python manage.py runscript script
     ```
    Dummy data is stores in `test.json` file which is store inside the diresctory `scripts`.
    When this command runs the file `scripts/script.py` executed and dummy data will be stored in db.
@@ -79,3 +79,11 @@ To install this in local server after downloading and extracting the respo.
    http://127.0.0.1:8000/api/W012A3CDE
     ```
    Returns NotFound error when the object with given id is not in db.
+   
+   
+## Production
+The project is hosted in the pythonanywhere and will get the results from the following URLs.
+1. http://vishnupv.pythonanywhere.com/api/ for getting all the users and their activity periods
+2. http://vishnupv.pythonanywhere.com/api/W012A3CDE for getting a specific user details have the user id W012A3CDE
+
+You can use another user_id for getting details of another user.
